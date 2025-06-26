@@ -1,12 +1,19 @@
 import {Button} from '@adv-re/ui/button'
 import Image from 'next/image'
 
+interface AgentCardProps {
+  AgencyName: string;
+  NumberOfProperties: string;
+  AñosInFotocasa: string;
+  logoImageUrl?: string;
+  logoImageAlt?: string;
+}
+
 export default function AgentCard({ 
   AgencyName, 
   NumberOfProperties,
   AñosInFotocasa, 
-  logoImageUrl, 
-  logoImageAlt,  
+  logoImageUrl,  
 }: AgentCardProps){
   const defaultLogoImageUrl = logoImageUrl || `https://picsum.photos/320/224?random=${Math.floor(Math.random() * 1000) + 1}`;
 

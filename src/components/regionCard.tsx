@@ -35,7 +35,7 @@ export default function RegionCard({
           src={defaultImageUrl}
           width={320}
           height={224}
-          alt={imageAlt}
+          alt={imageAlt || "Region image"}
           className='min-w-320'
       />
       <div className="flex flex-col text-on-surface gap-md text-left py-xl">

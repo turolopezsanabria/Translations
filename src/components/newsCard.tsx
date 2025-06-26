@@ -1,12 +1,19 @@
 import {Button} from '@adv-re/ui/button'
 import Image from 'next/image'
 
+interface NewsCardProps {
+  title: string;
+  date: string;
+  description: string;
+  imageUrl?: string;
+  imageAlt?: string;
+}
+
 export default function NewsCard({ 
   title, 
   date,
   description, 
-  imageUrl, 
-  imageAlt,  
+  imageUrl,  
 }: NewsCardProps){
   const defaultImageUrl = imageUrl || `https://picsum.photos/320/224?random=${Math.floor(Math.random() * 1000) + 1}`;
 
@@ -21,7 +28,7 @@ return (
         />
         <div className="p-xl description flex flex-col gap-md">
           <h3 className="text-headline-2">{title}</h3>
-          <p className="text-body-2 text-neutral">{date}}</p>
+          <p className="text-body-2 text-neutral">{date}</p>
           <p className="text-body-2">{description}</p>
           <Button intent="main" variant="outlined" className="w-min mt-md">Leer más</Button>
         </div>

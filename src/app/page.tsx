@@ -4,7 +4,17 @@ import RegionCard from '../components/regionCard';
 import AgentCard from '../components/agentCard';
 import NewsCard from '../components/newsCard';
 import Link from 'next/link';
-import Image from 'next/image'
+import Image from 'next/image';
+// ⚠️ No he podido usar este componente
+// import {
+//   Select,
+//   SelectLabel,
+//   SelectItem,
+//   SelectContent,
+//   SelectGroup,
+//   SelectTrigger,
+//   SelectValue
+// } from '@adv-re/ui/select'
 
 export default function Home() {
 
@@ -28,7 +38,25 @@ export default function Home() {
               </a>
               <div className="gap-md p-lg flex items-center bg-main">
                 <Button variant="outlined" intent="surface">Publica tu anuncio</Button>
-                <Button variant="outlined" intent="surface">English</Button>
+                <select className="min-h-40 rounded-md border-on-main border-sm p-md bg-transparent text-on-main border rounded p-2 bg-white">
+                  <option value="catala">Català</option>
+                  <option value="english" selected>English</option>
+                  <option value="franais">Français</option>
+                  <option value="deutch">Deutch</option>
+                  <option value="italiano">Italiano</option>
+                  <option value="portuges">Portugês</option>
+                  <option value="dansk">Dansk</option>
+                  <option value="suomi">Suomi</option>
+                  <option value="norsk">Norsk</option>
+                  <option value="nederlands">Nederlands</option>
+                  <option value="polski">Polski</option>
+                  <option value="romana">Română</option>
+                  <option value="pусский">Русский</option>
+                  <option value="svenska">Svenska</option>
+                  <option value="Ελληνικά">Ελληνικά</option>
+                  <option value="中文">中文</option>
+                  <option value="Українська">Українська</option>
+                </select>
               </div>
            </header>
            <div className="bg-surface w-full">

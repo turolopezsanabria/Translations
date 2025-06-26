@@ -1,11 +1,17 @@
-import {LinkBox, LinkBoxLink, LinkBoxRaised} from '@adv-re/ui/link-box'
+import {LinkBox, LinkBoxLink} from '@adv-re/ui/link-box'
+
+interface CityCardProps {
+  cityName: string;
+  NumberOfAnuncios: string;
+  cityImageUrl?: string;
+  cityImageAlt?: string;
+}
 
 export default function cityCard({ 
   cityName, 
   NumberOfAnuncios,
-  cityImageUrl, 
-  cityImageAlt,  
-}: AgentCardProps){
+  cityImageUrl,  
+}: CityCardProps){
   const defaultCityImageUrl = cityImageUrl || `https://picsum.photos/320/224?random=${Math.floor(Math.random() * 1000) + 1}`;
 
 return (
