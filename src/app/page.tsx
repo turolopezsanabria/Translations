@@ -31,6 +31,12 @@ export default function Home() {
                 <Button variant="outlined" intent="surface">English</Button>
               </div>
            </header>
+           <div className="bg-surface w-full">
+            <div className='max-w-560 text-center min-h-224 flex justify-center flex-col'>
+              <h1 className='text-display-1'>Viviendas en venta en España</h1>
+              <p className="text-body-1">Busca entre las 489.684 propiedades en venta publicadas en idealista, el portal inmobiliario más grande de España.</p>
+            </div>
+           </div>
            <div className="items-start mt-3xl">
             <h2 className="text-display-3 pb-xl">Los más buscados</h2>
             <div className="justify-items-start grid grid-cols-3 gap-lg">
