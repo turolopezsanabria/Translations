@@ -1,18 +1,19 @@
-import type { Config } from "tailwindcss";
+import {theme, darkTheme} from '@adv-re/theme'
+import plugins from '@adv-re/tailwind-plugin'
 
-export default {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+/** @type {import('tailwindcss').Config} */
+const config = {
+  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}', './node_modules/@adv-re/ui/dist/**/*.{js,mjs}'],
+  darkMode: ['selector', '[data-theme="dark"]'],
   theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
-    },
+    extend: {}
   },
-  plugins: [],
-} satisfies Config;
+  plugins: [
+    ...plugins({
+      htmlFontSize: 16,
+      themes: {default: theme, dark: darkTheme}
+    })
+  ]
+}
+
+export default config
