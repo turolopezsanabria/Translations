@@ -66,21 +66,6 @@ export default function Home() {
                   </SelectGroup>
                 </SelectContent>
               </Select>
-                {/* <select className="min-h-40 rounded-md border-on-main border-sm p-md bg-transparent text-on-main border rounded p-2 bg-white">
-                  
-                  <option value="portuges">Portugês</option>
-                  <option value="dansk">Dansk</option>
-                  <option value="suomi">Suomi</option>
-                  <option value="norsk">Norsk</option>
-                  <option value="nederlands">Nederlands</option>
-                  <option value="polski">Polski</option>
-                  <option value="romana">Română</option>
-                  <option value="pусский">Русский</option>
-                  <option value="svenska">Svenska</option>
-                  <option value="Ελληνικά">Ελληνικά</option>
-                  <option value="中文">中文</option>
-                  <option value="Українська">Українська</option>
-                </select> */}
               </div>
            </header>
            <div className="bg-surface w-full">
