@@ -1,3 +1,4 @@
+'use client'
 import {Button} from '@adv-re/ui/button'
 import CityCard from '../components/cityCard';
 import RegionCard from '../components/regionCard';
@@ -5,16 +6,16 @@ import AgentCard from '../components/agentCard';
 import NewsCard from '../components/newsCard';
 import Link from 'next/link';
 import Image from 'next/image';
-// ⚠️ No he podido usar este componente
-// import {
-//   Select,
-//   SelectLabel,
-//   SelectItem,
-//   SelectContent,
-//   SelectGroup,
-//   SelectTrigger,
-//   SelectValue
-// } from '@adv-re/ui/select'
+// No había podido usar este componente, Andrés me ayudó añadiendo 'use client'
+import {
+  Select,
+  SelectLabel,
+  SelectItem,
+  SelectContent,
+  SelectGroup,
+  SelectTrigger,
+  SelectValue
+} from '@adv-re/ui/select'
 
 export default function Home() {
 
@@ -37,13 +38,36 @@ export default function Home() {
                 />
               </a>
               <div className="gap-md p-lg flex items-center bg-main">
-                <Button variant="outlined" intent="surface">Publica tu anuncio</Button>
-                <select className="min-h-40 rounded-md border-on-main border-sm p-md bg-transparent text-on-main border rounded p-2 bg-white">
-                  <option value="catala">Català</option>
-                  <option value="english" selected>English</option>
-                  <option value="franais">Français</option>
-                  <option value="deutch">Deutch</option>
-                  <option value="italiano">Italiano</option>
+                <Button  className="min-h-44 min-w-min" variant="outlined" intent="surface">Publica tu anuncio</Button>
+                <Select>
+                <SelectTrigger className="w-[190px]">
+                  <SelectValue placeholder="Select a fruit" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup>
+                    <SelectLabel>Select your language</SelectLabel>
+                    <SelectItem value="catala">Català</SelectItem>
+                    <SelectItem value="english">English</SelectItem>
+                    <SelectItem value="francais">Français</SelectItem>
+                    <SelectItem value="deutch">Deutch</SelectItem>
+                    <SelectItem value="italiano">Italiano</SelectItem>
+                    <SelectItem value="portuges">Portugês</SelectItem>
+                    <SelectItem value="dansk">Dansk</SelectItem>
+                    <SelectItem value="suomi">Suomi</SelectItem>
+                    <SelectItem value="norsk">Norsk</SelectItem>
+                    <SelectItem value="nederlands">Nederlands</SelectItem>
+                    <SelectItem value="polski">Polski</SelectItem>
+                    <SelectItem value="romana">Română</SelectItem>
+                    <SelectItem value="pусский">Русский</SelectItem>
+                    <SelectItem value="svenska">Svenska</SelectItem>
+                    <SelectItem value="Ελληνικά">Ελληνικά</SelectItem>
+                    <SelectItem value="中文">中文</SelectItem>
+                    <SelectItem value="Українська">Українська</SelectItem>
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+                {/* <select className="min-h-40 rounded-md border-on-main border-sm p-md bg-transparent text-on-main border rounded p-2 bg-white">
+                  
                   <option value="portuges">Portugês</option>
                   <option value="dansk">Dansk</option>
                   <option value="suomi">Suomi</option>
@@ -56,13 +80,13 @@ export default function Home() {
                   <option value="Ελληνικά">Ελληνικά</option>
                   <option value="中文">中文</option>
                   <option value="Українська">Українська</option>
-                </select>
+                </select> */}
               </div>
            </header>
            <div className="bg-surface w-full">
             <div className='max-w-560 text-center min-h-224 flex justify-center flex-col'>
               <h1 className='text-display-1'>Viviendas en venta en España</h1>
-              <p className="text-body-1">Busca entre las 489.684 propiedades en venta publicadas en idealista, el portal inmobiliario más grande de España.</p>
+              <p className="text-body-1">Busca entre las 489.684 propiedades en venta publicadas en fotocasa, el portal inmobiliario más grande de España.</p>
             </div>
            </div>
            <div className="items-start mt-3xl">
@@ -264,12 +288,12 @@ export default function Home() {
                   <NewsCard
                     title="Ana de Miguel sustituye a Diego Lozano al frente de la Empresa Municipal de Vivienda de Madrid"
                     date="26 Junio 2025"
-                    description="La hasta ahora directora general de Relaciones Institucionales y Proyectos Estratégicos del Ayuntamiento de Madrid, Ana de Miguel, ha sido designada nueva CEO de la Empresa Municipal de la Vivienda y Suelo (EMVS), en sustitución de Diego Lozano, quien ha sido nombrado jefe de Gabinete del alcalde de Madrid, José Luis Martínez-Almeida. El nombramiento de De Miguel ha sido aprobado en la última Junta de Gobierno municipal, según confirman fuentes a idealista/news..."
+                    description="La hasta ahora directora general de Relaciones Institucionales y Proyectos Estratégicos del Ayuntamiento de Madrid, Ana de Miguel, ha sido designada nueva CEO de la Empresa Municipal de la Vivienda y Suelo (EMVS), en sustitución de Diego Lozano, quien ha sido nombrado jefe de Gabinete del alcalde de Madrid, José Luis Martínez-Almeida. El nombramiento de De Miguel ha sido aprobado en la última Junta de Gobierno municipal, según confirman fuentes a fotocasa/news..."
                     />
                   <NewsCard
                     title="Un tercio del gasto de los hogares se dedica a la vivienda y sus suministros: 11.030 euros anuales"
                     date="26 Junio 2025"
-                    description="En mayo de 2025, el precio medio del metro cuadrado en Cartagena se situó en 1.452 euros, según datos de idealista. Esto supone:"
+                    description="En mayo de 2025, el precio medio del metro cuadrado en Cartagena se situó en 1.452 euros, según datos de fotocasa. Esto supone:"
                     />
                 </div>
             </div>
